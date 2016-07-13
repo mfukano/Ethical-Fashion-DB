@@ -1,0 +1,14 @@
+<p>
+	<strong>Title:</strong>
+	<%= @brand.title %>
+</p>
+
+<p>
+	<strong>Text:</strong>
+	<%= @brand.text %>
+</p>
+
+<%= button_to "Go to #{@brand.title}", "http://#{@brand.link}", :method => :get %>
+
+<%= link_to 'Edit', edit_brand_path(@brand) %> |
+<%= link_to 'Back', brands_path %>

@@ -1,0 +1,18 @@
+<%= button_to "New Brand", new_brand_path, :method => :get %>
+
+<table class="table">
+	<tr>
+		<th>Title</th>
+		<th>Text</th>
+	</tr>
+
+	<% @brands.each do |b| %>
+		<tr>
+			<td><%= b.title %></td>
+			<td><%= b.text %></td>
+			<td><%= button_to "Show", brand_path(b), :method => :get %></td>
+			<td><%= button_to "Edit", edit_brand_path(b), :method => :get %></td>
+			<td><%= button_to "Destroy", brand_path(b), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+		</tr>
+	<% end %>
+</table>

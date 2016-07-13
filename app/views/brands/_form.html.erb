@@ -1,0 +1,36 @@
+<%= form_for @brand do |b| %>
+
+	<% if @brand.errors.any? %>
+		<div id="error_explanation">
+			<h2>Yikes! 
+				<%= pluralize(@brand.errors.count,""), style: "color: red" %>
+				details are stopping you:
+			</h2>
+			<ul>
+				<% @brand.errors.full_messages.each do |msg| %>
+					<li><%= msg %></li>
+				<% end %>
+			</ul>
+		</div>
+	<% end %>
+
+	<p>
+		<%= b.label :title %><br>
+		<%= b.text_field :title, class: "form-control" %>
+	</p>
+
+	<p>
+		<%= b.label :text %>
+		<%= b.text_area :text, class: "form-control" %>
+	</p>
+
+	<p>
+		<%= b.label :link %>
+		<%= b.text_area :link, class: "form-control" %>
+	</p>
+
+	<p>
+		<%= b.submit "Submit", class: "btn btn-primary btn-lg" %>
+	</p>
+
+<% end %>
