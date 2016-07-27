@@ -19,7 +19,7 @@ class BrandsController < ApplicationController
 		@brand = Brand.new(brand_params)
 
 		if @brand.save
-			redirect_to @brand
+			redirect_to @brand, notice: "Brand page created successfully."
 		else
 			render 'new'
 		end
@@ -44,6 +44,6 @@ class BrandsController < ApplicationController
 
 	private
 		def brand_params
-			params.require(:brand).permit(:title, :text, :link)
+			params.require(:brand).permit(:title, :text, :link, :image)
 		end
 end

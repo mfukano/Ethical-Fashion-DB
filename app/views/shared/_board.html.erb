@@ -1,0 +1,33 @@
+
+<% @brands.each do |b| %>
+<%= b.title %><br>
+<%= link_to("#fancybox-#{b.id}", class: "fancybox") do %>
+	<%= image_tag(b.image.url(:square)) %>
+<% end %><br>
+<%= b.text %>
+
+<div style="display: none">
+	<div id="fancybox-<%= b.id %>" class="fancybox-display">
+		<%= link_to root_path do %>
+			<%= image_tag(b.image.url) %>
+			<ul class="fancybox-button-links">
+				<li><%= link_to "Learn more", brand_path(b), class: "btn btn-primary fancybox-btn", :method => :get %></li>
+				<li><%= link_to "Go to #{b.title}", "http://#{b.link}", class: "btn btn-primary fancybox-btn2", :target => "_blank" %></li>
+			</ul>
+		<% end %>
+		<span class="fancybox-text"><%= b.text %></span>
+	</div>
+</div>
+
+
+<table>
+<tr>
+<td><%= button_to "Show", brand_path(b), :method => :get %></td>
+<td><%= button_to "Edit", edit_brand_path(b), :method => :get %></td>
+<td><%= button_to "Destroy", brand_path(b), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+</tr>
+</table>
+<% end %>
+
+
+

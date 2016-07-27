@@ -1,4 +1,8 @@
 <p>
+	<%= image_tag @brand.image.url(:square) %>
+</p>
+
+<p>
 	<strong>Title:</strong>
 	<%= @brand.title %>
 </p>
@@ -8,7 +12,8 @@
 	<%= @brand.text %>
 </p>
 
-<%= button_to "Go to #{@brand.title}", "http://#{@brand.link}", :method => :get %>
+<%= link_to "Go to #{@brand.title}", "http://#{@brand.link}", class: "btn btn-primary", :target => "_blank" %>
+
 
 <%= link_to 'Edit', edit_brand_path(@brand) %> |
-<%= link_to 'Back', brands_path %>
+<%= link_to 'Back', :back %>

@@ -1,10 +1,9 @@
-<%= form_for @brand do |b| %>
+<%= form_for @brand, html: { multipart: true } do |b| %>
 
 	<% if @brand.errors.any? %>
 		<div id="error_explanation">
 			<h2>Yikes! 
-				<%= pluralize(@brand.errors.count,""), style: "color: red" %>
-				details are stopping you:
+				<span id="errors"><%= @brand.errors.count %> details</span> are stopping you:
 			</h2>
 			<ul>
 				<% @brand.errors.full_messages.each do |msg| %>
@@ -22,6 +21,11 @@
 	<p>
 		<%= b.label :text %>
 		<%= b.text_area :text, class: "form-control" %>
+	</p>
+
+	<p>
+		<%= b.label :image %><br>
+		<%= b.file_field :image %>
 	</p>
 
 	<p>

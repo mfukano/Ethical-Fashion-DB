@@ -1,0 +1,76 @@
+.fancybox-display {
+	img {
+		width: 100%;
+		height: 100%;
+		margin: 0 auto;
+	}
+	h4, h5 {
+		z-index: 9000;
+		position: absolute;
+		test-align: center;
+		width: 100%;
+		padding: 5px;
+		background: rgba(0,0,0,0.5);
+		color: #ddd;
+		a {
+			color: #cdcdcd;
+			&:visited, &:link {
+				color: #cdcdcd;
+			}
+			&:hover {
+				color: #adadad;
+			}
+		}
+	}
+	h4 {
+		bottom: -10px;
+	}
+	h5 {
+		top: -10px;
+		text-transform: uppercase;
+		letter-spacing: 2px;
+	}
+}
+
+.fancybox-skin {
+    background: white;
+}
+
+image:hover {
+	opacity: 50%;
+}
+
+.fancybox-button-links {
+	position: fixed;
+	display: flex;
+  list-style: none;
+  justify-content: space-between;
+  bottom: 0;
+  right: 0;
+  padding: 0;
+  margin: 0 auto;
+
+}
+
+.fancybox-btn {
+	border-radius: 0;
+	background-color: transparent;
+	border-color: transparent;
+}
+
+.fancybox-btn2 {
+	border-color: transparent;
+	border-radius: 0;
+	background-color: transparent;
+}
+
+.fancybox-text {
+	position: fixed;
+	bottom: 0;
+	left: 50%;
+	transform: translateX(-50%);
+	margin: 0 auto;
+	color: #fff;
+	font-size: 20px;
+
+}
