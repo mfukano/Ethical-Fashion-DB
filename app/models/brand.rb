@@ -1,5 +1,5 @@
 class Brand < ApplicationRecord
-	validates :title, presence: true, uniqueness: true
+	validates_length_of :title, minimum: 3, maximum: 30, presence: true, uniqueness: true
 	validates :link, presence: true
 	validates :text, presence: true
 

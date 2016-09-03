@@ -1,13 +1,81 @@
-.fancybox-display {
-	img {
-		width: 100%;
-		height: 100%;
-		margin: 0 auto;
+#brands {
+	padding: 30px 0;
+}
+
+span {
+	display: none;
+}
+
+a:hover {
+	span {
+		display: block; 
+    position: absolute;
+    vertical-align: middle;
+    text-align: center; 
+    top:45%;
+    width: 100%;
 	}
+}
+
+span b {
+    padding: 10px 20px;
+    font-size: 22px;
+    text-shadow: none;
+    font-weight: normal;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    background:#2DC76E;
+    color: white;   
+}
+
+a:hover span b:hover {
+    background: #25A65B;
+}
+
+/*.image-tag {
+	display: none;
+}
+
+.fancybox.image-tag {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	text-align: center;
+	vertical-align: middle;
+	opacity: 1;
+	color: #000;
+}*/
+
+
+.fancybox {
+	max-height: 250px;
+	width: auto;
+	margin: 0 auto;
+}
+
+.fancybox-logo {
+	opacity: 1;
+	border-radius: 3px;
+	max-height: 250px;
+	width: auto;
+	.fancybox-logo:hover {
+		opacity: 0.6;
+		.image-tag{
+			display: block;
+		}
+	}
+}
+
+
+.fancybox-display {
+	height: 60%;
+	width: 60%;
+
 	h4, h5 {
 		z-index: 9000;
 		position: absolute;
-		test-align: center;
+		text-align: center;
 		width: 100%;
 		padding: 5px;
 		background: rgba(0,0,0,0.5);
@@ -32,14 +100,27 @@
 	}
 }
 
-.fancybox-skin {
-    background: white;
+.fancybox-container {
+	height: 300px;
+	width: auto;
+	line-height: 200px;
+	text-align: center;
+	margin: 0 auto;
 }
 
-image:hover {
-	opacity: 50%;
+.resize-img {
+	max-width: 100%;
+	width: auto;
+	max-height: 100%;
+	border-radius: 3px;
+	height: auto;
+	margin: 0 auto;
+	vertical-align: middle;
 }
 
+
+
+// This is the footer wrapper after fancybox pops up
 .fancybox-button-links {
 	position: fixed;
 	display: flex;
@@ -47,23 +128,31 @@ image:hover {
   justify-content: space-between;
   bottom: 0;
   right: 0;
-  padding: 0;
   margin: 0 auto;
-
+  height: 48px;
 }
 
+
+// Individual styling for buttons
 .fancybox-btn {
-	border-radius: 0;
+	float: right;
+	width: auto;
+	padding: 14px;
 	background-color: transparent;
 	border-color: transparent;
-}
-
-.fancybox-btn2 {
-	border-color: transparent;
 	border-radius: 0;
-	background-color: transparent;
+	color: #fff;
+	text-decoration: none;
+	&:hover {
+		background-color: #25A65B;
+		text-decoration: none;
+		border-radius: 3px;
+		color: #fff;
+	}
 }
 
+
+// The workaround for brand text in the middle, still needs fixing.
 .fancybox-text {
 	position: fixed;
 	bottom: 0;
@@ -71,6 +160,7 @@ image:hover {
 	transform: translateX(-50%);
 	margin: 0 auto;
 	color: #fff;
-	font-size: 20px;
-
+	font-size: 15px;
+	text-align: center;
+	width: 70%;
 }

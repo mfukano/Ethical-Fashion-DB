@@ -3,8 +3,8 @@
 # You can use CoffeeScript in this file: http://coffeescript.org/
 
 $ ->
-	$('#all-posts').imagesLoaded ->
-		$('#all-posts').masonry
+	$('#brands').imagesLoaded ->
+		$('#brands').masonry
 			isAnimated: true
 			isFitWidth: true
 			itemSelector: '.box'
@@ -20,3 +20,4 @@ $ ->
 		padding: 0
 		parent: 'body'
 		scrolling: no
+

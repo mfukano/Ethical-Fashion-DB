@@ -7,3 +7,43 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+
+#nav {
+	height: 48px;
+	background-color: #fff;
+ 	ul {
+		list-style-type: none;
+		margin: 0 auto;
+		padding: 0;
+		height: auto;
+		display: inline;
+ 		li {
+		float: left;
+		&:hover {
+			background-color: #88f191;
+			border-radius: 3px;
+		}
+		a {
+			display: block;
+			color: #000;
+			text-align: center;
+			padding: 14px 16px;
+			text-decoration: none;	
+			&:hover {
+				color: #fff;
+			} 
+		} 
+		}
+	}
+}
+
+#menu-left {
+	float: left;
+}
+#menu-right {
+	float: right;
+}
+
+#nav-wrapper {
+	vertical-align: middle;
+}
